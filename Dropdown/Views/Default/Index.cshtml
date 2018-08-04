@@ -1,0 +1,11 @@
+﻿@model Dropdown.Models.Student
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@Html.DropDownListFor(m => item.Quantity,
+                        new SelectList(new[] { 1, 2, 3, 4, 5 }, selectedQuantity), new { bookId = item.BookId, @onchange = "form.submit();" })
+
